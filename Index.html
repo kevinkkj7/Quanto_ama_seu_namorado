@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Quanto você ama seu namorado?</title>	<style>
+
+		body {
+
+			background-color: red;
+
+		}
+
+		h1 {
+
+			font-weight: bold;
+
+			text-align: center;
+
+		}
+
+		form {
+
+			display: flex;
+
+			flex-direction: column;
+
+			align-items: center;
+
+			margin-top: 50px;
+
+		}
+
+		label {
+
+			color: white;
+
+			font-size: 20px;
+
+			margin-bottom: 10px;
+
+		}
+
+		input[type=number] {
+
+			background-color: pink;
+
+			border: none;
+
+			padding: 10px;
+
+			border-radius: 5px;
+
+			font-size: 18px;
+
+			text-align: center;
+
+			width: 200px;
+
+			margin-bottom: 20px;
+
+		}
+
+		button {
+
+			background-color: pink;
+
+			border: none;
+
+			padding: 10px;
+
+			border-radius: 5px;
+
+			font-size: 20px;
+
+			cursor: pointer;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Quanto você ama seu namorado?</h1>
+
+	<form>
+
+		<label for="num">Escolha um número:</label>
+
+		<input type="number" id="num" name="num" min="0" max="99999999999999999999999999999999999999999999998888">
+
+		<button type="button" onclick="verificarAmor()">Verificar</button>
+
+	</form>
+
+	<script>
+
+		function verificarAmor() {
+
+			var num = parseInt(document.getElementById("num").value);
+
+			if (num >= 0 && num <= 5) {
+
+				alert("Ele vai ficar triste se saber disso. Aumente mais esse número, Anne!");
+
+			} else if (num >= 6 && num <= 10) {
+
+				alert("Aceitável, mas Anne, só isso? Seu amor por ele é tão pequeno?");
+
+			} else if (num >= 11 && num <= 100) {
+
+				alert("Muito bom, Anne! Seu amor por ele está crescendo ❤️");
+
+			} else if (num >= 101 && num <= 99999999999999999999999999999999999999999999998888) {
+
+				alert("Anne, esse homem te ama demais! O amor dele beira o infinito ❤️❤️❤️❤️❤️❤️");
+
+			} else {
+
+				alert("Esse número é maior que o nosso limite. Tente um número menor, Anne!");
+
+			}
+
+		}
+
+	</script>
+
+</body>
+
+</html>
