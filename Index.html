@@ -2,132 +2,90 @@
 
 <html>
 
-<head>
+  <head>
 
-	<title>Quanto você ama seu namorado?</title>	<style>
+    <title>Meu Aniversário de Namoro</title>
 
-		body {
+    <style>
 
-			background-color: red;
+      body {
 
-		}
+        background-color: pink;
 
-		h1 {
+      }
 
-			font-weight: bold;
+      #heart {
 
-			text-align: center;
+        width: 100px;
 
-		}
+        height: 100px;
 
-		form {
+        background-image: url('heart.png');
 
-			display: flex;
+        background-size: cover;
 
-			flex-direction: column;
+        background-repeat: no-repeat;
 
-			align-items: center;
+        margin: 0 auto;
 
-			margin-top: 50px;
+      }
 
-		}
+      button {
 
-		label {
+        background-color: white;
 
-			color: white;
+        color: black;
 
-			font-size: 20px;
+        padding: 10px;
 
-			margin-bottom: 10px;
+        border: none;
 
-		}
+        margin: 10px;
 
-		input[type=number] {
+      }
 
-			background-color: pink;
+    </style>
 
-			border: none;
+  </head>
 
-			padding: 10px;
+  <body>
 
-			border-radius: 5px;
+    <div id="heart"></div>
 
-			font-size: 18px;
+    <h1>Você me ama?</h1>
 
-			text-align: center;
+    <button id="yes">Sim</button>
 
-			width: 200px;
+    <button id="no">Não</button>
 
-			margin-bottom: 20px;
+    <script>
 
-		}
+      var noButton = document.getElementById("no");
 
-		button {
+      noButton.addEventListener("click", function() {
 
-			background-color: pink;
+        var x = Math.floor(Math.random() * window.innerWidth);
 
-			border: none;
+        var y = Math.floor(Math.random() * window.innerHeight);
 
-			padding: 10px;
+        noButton.style.position = "absolute";
 
-			border-radius: 5px;
+        noButton.style.left = x + "px";
 
-			font-size: 20px;
+        noButton.style.top = y + "px";
 
-			cursor: pointer;
+      });
 
-		}
+      var yesButton = document.getElementById("yes");
 
-	</style>
+      yesButton.addEventListener("click", function() {
 
-</head>
+        alert("Eu também te amo!");
 
-<body>
+      });
 
-	<h1>Quanto você ama seu namorado?</h1>
+    </script>
 
-	<form>
-
-		<label for="num">Escolha um número:</label>
-
-		<input type="number" id="num" name="num" min="0" max="99999999999999999999999999999999999999999999998888">
-
-		<button type="button" onclick="verificarAmor()">Verificar</button>
-
-	</form>
-
-	<script>
-
-		function verificarAmor() {
-
-			var num = parseInt(document.getElementById("num").value);
-
-			if (num >= 0 && num <= 5) {
-
-				alert("Ele vai ficar triste se saber disso. Aumente mais esse número, Anne!");
-
-			} else if (num >= 6 && num <= 10) {
-
-				alert("Aceitável, mas Anne, só isso? Seu amor por ele é tão pequeno?");
-
-			} else if (num >= 11 && num <= 100) {
-
-				alert("Muito bom, Anne! Seu amor por ele está crescendo ❤️");
-
-			} else if (num >= 101 && num <= 99999999999999999999999999999999999999999999998888) {
-
-				alert("Anne, esse homem te ama demais! O amor dele beira o infinito ❤️❤️❤️❤️❤️❤️");
-
-			} else {
-
-				alert("Esse número é maior que o nosso limite. Tente um número menor, Anne!");
-
-			}
-
-		}
-
-	</script>
-
-</body>
+  </body>
 
 </html>
